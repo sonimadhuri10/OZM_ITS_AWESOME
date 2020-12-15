@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">OZM</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="applist">
+        <item>Amazon</item>
+        <item>Flipkart</item>
+        <item>Crickbuzz</item>
+        <item>Snapdeal</item>
+        <item>Uber Eats</item>
+        <item>Swiggy</item>
+        <item>Play Rummy</item>
+    </string-array>
+</resources>

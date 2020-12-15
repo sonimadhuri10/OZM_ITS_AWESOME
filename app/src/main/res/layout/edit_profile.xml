@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F4F2F2"
+    android:layout_marginTop="?actionBarSize"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primarycolor"
+            android:clipChildren="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/loginimage"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.7"
+                        android:background="#000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="115dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/updateimage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:background="@drawable/coloruser"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#000"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvCashback"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="12dp"
+                android:layout_gravity="right"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:text="View Cashback"
+                android:background="@drawable/button_background"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    style="@style/text_style"
+                    android:text="Name :"
+                    android:layout_height="match_parent">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:hint="Full Name"
+                    style="@style/text_style"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:padding="5dp"
+                    android:background="@color/white"
+                    android:layout_height="35dp">
+                </EditText>
+
+
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    style="@style/text_style"
+                    android:text="Mobile No :"
+                    android:layout_height="match_parent">
+
+                </TextView>
+
+                <EditText
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:background="@color/white"
+                    android:hint="Mobile No"
+                    style="@style/text_style"
+                    android:layout_height="35dp">
+                </EditText>
+
+
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    style="@style/text_style"
+                    android:text="Email :"
+                    android:layout_height="match_parent">
+
+                </TextView>
+
+                <EditText
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:hint="Email"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:padding="5dp"
+                    android:background="@color/white"
+                    style="@style/text_style"
+                    android:layout_height="35dp">
+                </EditText>
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    style="@style/button_text_style"
+                    android:text="Update Profile"
+                    android:visibility="gone"
+                    android:background="@drawable/button_background"
+                    android:layout_height="30dp">
+
+                </Button>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

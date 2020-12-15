@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="?actionBarSize"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="match_parent"
+            style="@style/text_style"
+            android:textColor="@color/primarycolor"
+            android:textSize="18dp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:text="Application"
+            style="@style/text_style"
+            android:textSize="15dp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/et_background"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spApp"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="35dp">
+            </Spinner>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            style="@style/text_style"
+            android:text="Amount"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:hint="Amount"
+            android:textSize="13dp"
+            android:inputType="number"
+            android:padding="5dp"
+            style="@style/Header_style"
+            android:background="@drawable/et_background"
+            android:layout_height="35dp">
+        </EditText>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            style="@style/text_style"
+            android:text="Order Date"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/etDate"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:hint="Date"
+            style="@style/Header_style"
+            android:gravity="center_vertical"
+            android:textSize="13dp"
+            android:padding="5dp"
+            android:background="@drawable/et_background"
+            android:layout_height="35dp">
+        </TextView>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            style="@style/text_style"
+            android:text="Uplod your bill"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/et_background"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgBill"
+                android:layout_width="150dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:layout_height="150dp">
+            </ImageView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btncashbackapply"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            style="@style/button_text_style"
+            android:text="Submit"
+            android:background="@drawable/button_background"
+            android:layout_height="30dp">
+
+        </Button>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

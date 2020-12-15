@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="?actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/toolbar_background"
+                android:layout_height="120dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="10dp"
+                    android:layout_height="150dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        android:background="@drawable/banner2"
+                        android:layout_height="wrap_content">
+
+                        <!--<TextView
+                            android:layout_width="match_parent"
+                            android:text="Recently App"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            style="@style/Header1_style"
+                            android:gravity="center"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <View
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="#000"
+                            android:layout_height="0.5dp">
+
+                        </View>-->
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:text="All Categories"
+            android:fontFamily="sans-serif-condensed-medium"
+            style="@style/Header1_style"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <View
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:background="#000"
+            android:layout_height="0.5dp">
+
+        </View>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="5dp"
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="150dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </androidx.viewpager.widget.ViewPager>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/SliderDots"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

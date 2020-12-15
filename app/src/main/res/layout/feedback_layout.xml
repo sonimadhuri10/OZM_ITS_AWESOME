@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="?actionBarSize"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Feedback Type"
+            style="@style/text_style"
+            android:textSize="15dp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton android:id="@+id/rdOffer"
+                android:layout_width="wrap_content"
+                android:checked="true"
+                android:layout_height="wrap_content"
+                android:text="Offer Feedback"
+                />
+
+            <RadioButton android:id="@+id/rdRequestapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Request an App"
+               />
+
+            <RadioButton android:id="@+id/rdOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other Feedback"
+               />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            style="@style/text_style"
+            android:text="Please tell us your views about website and how to improve"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/etImprove"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:hint="Enter from here"
+            android:gravity="start"
+            style="@style/Header_style"
+            android:padding="5dp"
+            android:background="@drawable/et_background"
+            android:minLines="3"
+            android:layout_height="wrap_content">
+        </EditText>
+
+        <Button
+            android:id="@+id/btnfeedback"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            style="@style/button_text_style"
+            android:text="Submit"
+            android:background="@drawable/button_background"
+            android:layout_height="30dp">
+
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
