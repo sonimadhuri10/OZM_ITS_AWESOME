@@ -71,8 +71,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         pd.setMessage("Please wait...");
         apiInterface = APIClient.getClient().create(APIInterface.class);
 
-        slideUp =    AnimationUtils.loadAnimation(this, R.anim.slide_up_dialog);
-        fadein =    AnimationUtils.loadAnimation(this, R.anim.fadein);
+        slideUp =  AnimationUtils.loadAnimation(this, R.anim.slide_up_dialog);
+        fadein =  AnimationUtils.loadAnimation(this, R.anim.fadein);
         permission();
 
         llSignup.setOnClickListener(this);

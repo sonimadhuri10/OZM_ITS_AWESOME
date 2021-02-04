@@ -48,13 +48,13 @@ public class SubcategoeryAdapter extends RecyclerView.Adapter<SubcategoeryAdapte
             linearLayout = (LinearLayout) view.findViewById(R.id.llAdd);
             recyclerView = (RecyclerView) view.findViewById(R.id.recycle_selected_app);
             recyclerView.setHasFixedSize(false);
-            GridLayoutManager layoutManager = new GridLayoutManager(context, 4);
+            GridLayoutManager layoutManager = new GridLayoutManager(context, 5);
             // RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false);
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setItemAnimator(new DefaultItemAnimator());
       }
 
-    }
+  }
 
 
     @NonNull

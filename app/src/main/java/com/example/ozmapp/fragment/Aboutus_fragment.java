@@ -47,6 +47,5 @@ public class Aboutus_fragment extends Fragment {
 
         web1.setLongClickable(false);
         return v;
-
     }
 }

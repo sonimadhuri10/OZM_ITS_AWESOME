@@ -66,6 +66,12 @@
             android:theme="@style/AppTheme">
         </activity>
 
+        <activity android:name=".activity.OfferActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+
     </application>
 
 </manifest>

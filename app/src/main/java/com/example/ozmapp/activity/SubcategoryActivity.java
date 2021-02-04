@@ -3,13 +3,16 @@ package com.example.ozmapp.activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -88,6 +91,7 @@ public class SubcategoryActivity  extends AppCompatActivity {
                 public void onResponse(Call<ArrayList<SubCategoeyModel>> call, retrofit2.Response<ArrayList<SubCategoeyModel>> response) {
                     ArrayList<SubCategoeyModel> resource = response.body();
                     pd.dismiss();
+
                     subCategories_list = resource ;
                     if(subCategories_list.size() == 0){
                         llNodata.setVisibility(View.VISIBLE);
@@ -109,15 +113,33 @@ public class SubcategoryActivity  extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.offer, menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        onBackPressed();
-        return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        switch (id){
+            case R.id.item1:
+                Intent in = new Intent(SubcategoryActivity.this,OfferActivity.class);
+                in.putExtra("category",category);
+                startActivity(in);
+                overridePendingTransition(R.anim.left_in, R.anim.left_out);
+                return true;
+            default:
+                onBackPressed();
+                return super.onOptionsItemSelected(item);
+        }
+
     }
 
     @Override
     public void onBackPressed() {
         finish();
     }
+
 }

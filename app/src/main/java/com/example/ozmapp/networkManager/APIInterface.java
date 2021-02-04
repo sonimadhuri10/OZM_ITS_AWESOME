@@ -3,6 +3,7 @@ package com.example.ozmapp.networkManager;
 import com.example.ozmapp.model.AddModel;
 import com.example.ozmapp.model.HomeModel;
 import com.example.ozmapp.model.LoginModel;
+import com.example.ozmapp.model.Offermodel;
 import com.example.ozmapp.model.SignupModel;
 import com.example.ozmapp.model.SubCategoeyModel;
 import com.example.ozmapp.model.bannermodel;
@@ -80,9 +81,17 @@ public interface APIInterface {
     Call<ArrayList<bannermodel>> getbannerlist(
             @Body JsonObject body);
 
+    @POST("offergroup/user/list")
+    Call<ArrayList<AddModel>> getOfferType(
+            @Body JsonObject body);
 
-    // GET METHODS
-/*
+    @POST("offer/user/list")
+    Call<ArrayList<Offermodel>> getOffers(
+            @Body JsonObject body);
+
+
+ /*   // GET METHODS
+
     @GET("privacy")
     Call<PrivacyModel> getPrivacyPolicy();
 
@@ -92,10 +101,7 @@ public interface APIInterface {
     @GET("wallet")
     Call<SignupModel> getWallet(@Header("Authorization") String header);
 
-
     // POST METHODS
-
-
     @Multipart
     @POST("updateProfile")
     Call<SignupModel> getUpdateProfile(@Header("Authorization") String header,
@@ -106,7 +112,6 @@ public interface APIInterface {
                                        @Part("city") RequestBody city, @Part("zip") RequestBody zipcode,
                                        @Part("state") RequestBody state, @Part("country") RequestBody country,
                                        @Part("flat_no") RequestBody flat_no, @Part("building") RequestBody building);
-
 
     @FormUrlEncoded
     @POST("login/otp")
@@ -121,7 +126,6 @@ public interface APIInterface {
     @FormUrlEncoded
     @POST("product")
     Call<ProductModel> getproductDetail(@Field("id") String slug);
-
 
     @FormUrlEncoded
     @POST("home")
@@ -138,7 +142,6 @@ public interface APIInterface {
     Call<SignupModel> getChnagePassword(@Header("Authorization") String header,
                                         @Field("password") String password ,
                                         @Field("Oldpassword") String Oldpassword);*/
-
 
 }
 

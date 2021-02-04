@@ -3,6 +3,8 @@ package com.example.ozmapp.activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -36,6 +38,7 @@ public class CashbackActivity extends AppCompatActivity {
     RecyclerView recyclerView ;
     Cashback_adapter cashback_adapter ;
     ArrayList<cashback_model> al ;
+    LinearLayout llNodata ;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,6 +57,8 @@ public class CashbackActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Cashback History");
+
+        llNodata = (LinearLayout)findViewById(R.id.llNodata);
 
         recyclerView=(RecyclerView)findViewById(R.id.cashback_recycle);
         recyclerView.setHasFixedSize(true);
@@ -78,8 +83,9 @@ public class CashbackActivity extends AppCompatActivity {
                     pd.dismiss();
                     al = resource ;
                     if(al.size() == 0){
-                        Toast.makeText(CashbackActivity.this, "Sorry , there is no cashback history", Toast.LENGTH_SHORT).show();
+                        llNodata.setVisibility(View.VISIBLE);
                     }else{
+                        llNodata.setVisibility(View.GONE);
                         cashback_adapter = new Cashback_adapter(al,CashbackActivity.this);
                         recyclerView.setAdapter(cashback_adapter);
                     }

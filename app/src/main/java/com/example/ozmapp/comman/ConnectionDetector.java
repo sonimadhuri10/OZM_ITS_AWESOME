@@ -15,14 +15,15 @@ public class ConnectionDetector {
         ConnectivityManager cm = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfoMob = cm.getNetworkInfo(cm.TYPE_MOBILE);
         NetworkInfo netInfoWifi = cm.getNetworkInfo(cm.TYPE_WIFI);
+
         if (netInfoMob != null && netInfoMob.isConnectedOrConnecting()) {
             return true;
         }
 
         if (netInfoWifi != null && netInfoWifi.isConnectedOrConnecting()) {
-
             return true;
         }
+
         return false;
 
     }

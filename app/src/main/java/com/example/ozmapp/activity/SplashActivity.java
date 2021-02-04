@@ -16,7 +16,7 @@ import com.example.ozmapp.comman.SessionManagment;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 9000;
+    private static int SPLASH_TIME_OUT = 6000;
     SessionManagment sd;
     ImageView imageView ;
 

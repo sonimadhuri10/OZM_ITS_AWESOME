@@ -35,14 +35,12 @@ public class testingAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHolde
             super(itemView);
             linearLayout = (LinearLayout)itemView.findViewById(R.id.llAdd);
 
-
-
         }
     }
 
     // Now define the ViewHolder for Normal list item
     public class NormalViewHolder extends ViewHolder {
-        TextView tvName ;
+        TextView tvName  ;
         ImageView imageView ;
         LinearLayout llAppName ;
 
@@ -52,8 +50,6 @@ public class testingAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHolde
             tvName = (TextView) itemView.findViewById(R.id.tvAppName);
             imageView = (ImageView) itemView.findViewById(R.id.imgApp);
             llAppName = (LinearLayout)itemView.findViewById(R.id.llAppName);
-
-
 
         }
     }

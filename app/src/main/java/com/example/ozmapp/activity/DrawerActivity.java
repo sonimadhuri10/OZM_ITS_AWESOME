@@ -52,6 +52,11 @@ public class DrawerActivity extends AppCompatActivity implements
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // apiInterface = APIClient.getClient().create(APIInterface.class);
+        sd = new SessionManagment(this);
+        cd = new ConnectionDetector(this);
+
+
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
@@ -69,9 +74,9 @@ public class DrawerActivity extends AppCompatActivity implements
         tvMobile = (TextView) headerView.findViewById(R.id.tvMobile);
         circleImageView = (CircleImageView) headerView.findViewById(R.id.imgUser);
 
-       // apiInterface = APIClient.getClient().create(APIInterface.class);
-        sd = new SessionManagment(this);
-        cd = new ConnectionDetector(this);
+        tvName.setText(sd.getNAME());
+        tvEmail.setText(sd.getEMAIL());
+        tvMobile.setText("+91-"+sd.getMobile());
 
         drawer.addDrawerListener(toggle);
         toggle.syncState();

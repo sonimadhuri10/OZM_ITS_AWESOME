@@ -30,6 +30,7 @@ import com.example.ozmapp.activity.SignupActivity;
 import com.example.ozmapp.adapter.CategoryAdapter;
 import com.example.ozmapp.adapter.ImageAdapter;
 import com.example.ozmapp.comman.ConnectionDetector;
+import com.example.ozmapp.comman.DepthPageTransformer;
 import com.example.ozmapp.model.CategoryModel;
 import com.example.ozmapp.model.HomeModel;
 import com.example.ozmapp.model.SignupModel;
@@ -88,6 +89,8 @@ public class Dashboard_fragment extends Fragment {
             Toast.makeText(getActivity(), "Please check your internet connection...", Toast.LENGTH_SHORT).show();
         }
 
+        mViewPager.setPageTransformer( true, new DepthPageTransformer() );
+
         banner(getActivity());
         Categories();
 
@@ -108,6 +111,8 @@ public class Dashboard_fragment extends Fragment {
 
             }
         });
+
+
 
         llShare.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,8 +177,6 @@ public class Dashboard_fragment extends Fragment {
                             getActivity(),
                             R.drawable.active_dot)
                     );
-
-
 
                 }
                 @Override
